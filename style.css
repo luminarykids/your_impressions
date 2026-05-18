@@ -5,10 +5,19 @@
     box-sizing: border-box;
 }
 
+:root {
+    --bg-color: #f4f1ea;       /* Warna Krem lembut untuk background utama */
+    --card-bg: #ffffff;       /* Warna Putih bersih untuk background kotak */
+    --text-main: #3e2723;     /* Warna Coklat Gelap pekat untuk teks utama */
+    --text-muted: #795548;    /* Warna Coklat Medium untuk sub-teks */
+    --accent-brown: #8d6e63;  /* Warna Coklat Muda untuk elemen pendukung */
+    --border-color: #e0dcd3;  /* Warna Krem Gelap untuk garis tepi */
+    --focus-ring: rgba(141, 110, 99, 0.2);
+}
+
 body {
     font-family: 'Poppins', sans-serif;
-    /* Gradasi warna modern ala Instagram/Spotify yang disukai anak muda */
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-color: var(--accent-brown); /* Menggunakan warna krem solid, tanpa gradasi */
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -18,12 +27,13 @@ body {
 
 /* Card Utama */
 .main-card {
-    background: #ffffff;
+    background: var(--card-bg); /* Berwarna putih bersih */
     padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(62, 39, 35, 0.05); /* Shadow tipis bertema coklat */
     max-width: 580px;
     width: 100%;
+    border: 1px solid var(--border-color);
 }
 
 /* Header */
@@ -34,24 +44,24 @@ body {
 
 .tag {
     display: inline-block;
-    padding: 5px 14px;
-    background: #f0f4ff;
-    color: #5a67d8;
+    padding: 6px 14px;
+    background: #efebe9; /* Krem sangat muda */
+    color: var(--text-muted);
     font-size: 0.8rem;
     font-weight: 600;
-    border-radius: 50px;
+    border-radius: 6px;
     margin-bottom: 12px;
 }
 
 .header-section h1 {
-    color: #2d3748;
+    color: var(--text-main);
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
 .header-section p {
-    color: #718096;
+    color: var(--text-muted);
     font-size: 0.95rem;
     line-height: 1.5;
 }
@@ -72,58 +82,59 @@ body {
 label {
     font-size: 0.9rem;
     font-weight: 600;
-    color: #4a5568;
+    color: var(--text-main);
 }
 
 input[type="text"], textarea {
     width: 100%;
     padding: 12px 16px;
-    border: 2px solid #e2e8f0;
-    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
     font-family: inherit;
-    font-size: 0.95rem;
-    color: #2d3748;
-    transition: all 0.3s ease;
+    font-size: 0.85rem;
+    color: var(--text-main);
+    background-color: #ffffff;
+    transition: all 0.2s ease;
     outline: none;
 }
 
 input[type="text"]::placeholder, textarea::placeholder {
-    color: #a0aec0;
+    color: #bcaaa4; /* Coklat pastel pudar */
 }
 
-/* Efek Fokus yang Lembut & Modern */
+/* Efek Fokus yang Lembut */
 input[type="text"]:focus, textarea:focus {
-    border-color: #667eea;
-    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+    border-color: var(--accent-brown);
+    box-shadow: 0 0 0 4px var(--focus-ring);
 }
 
 textarea {
     resize: none;
 }
 
-/* Tombol Gradient yang Lebih Interaktif */
+/* Tombol Solid Coklat Aesthetic */
 .btn-gradient {
     width: 100%;
-    background: linear-gradient(to right, #667eea, #764ba2);
-    color: white;
+    background: var(--text-main); /* Menggunakan warna coklat gelap solid */
+    color: #ffffff;
     border: none;
     padding: 14px;
     font-size: 1rem;
     font-weight: 600;
-    border-radius: 12px;
+    border-radius: 8px;
     cursor: pointer;
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 4px 12px rgba(62, 39, 35, 0.15);
     transition: all 0.2s ease-in-out;
     margin-top: 10px;
 }
 
 .btn-gradient:hover {
-    transform: scale(1.02); /* Tombol sedikit membesar saat diarahkan kursor */
-    background: linear-gradient(to right, #764ba2, #667eea); /* Warna berputar balik */
+    background: var(--text-muted); /* Berubah ke coklat yang sedikit lebih muda saat di-hover */
+    transform: scale(1.01);
 }
 
 .btn-gradient:active {
-    transform: scale(0.98); /* Efek membal saat diklik */
+    transform: scale(0.99);
 }
 
 /* Responsif HP */
