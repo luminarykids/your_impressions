@@ -1,0 +1,137 @@
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Gradasi warna modern ala Instagram/Spotify yang disukai anak muda */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+/* Card Utama */
+.main-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    max-width: 580px;
+    width: 100%;
+}
+
+/* Header */
+.header-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 5px 14px;
+    background: #f0f4ff;
+    color: #5a67d8;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 50px;
+    margin-bottom: 12px;
+}
+
+.header-section h1 {
+    color: #2d3748;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.header-section p {
+    color: #718096;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Layout Form */
+.smk-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: #2d3748;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+input[type="text"]::placeholder, textarea::placeholder {
+    color: #a0aec0;
+}
+
+/* Efek Fokus yang Lembut & Modern */
+input[type="text"]:focus, textarea:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+}
+
+textarea {
+    resize: none;
+}
+
+/* Tombol Gradient yang Lebih Interaktif */
+.btn-gradient {
+    width: 100%;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    transition: all 0.2s ease-in-out;
+    margin-top: 10px;
+}
+
+.btn-gradient:hover {
+    transform: scale(1.02); /* Tombol sedikit membesar saat diarahkan kursor */
+    background: linear-gradient(to right, #764ba2, #667eea); /* Warna berputar balik */
+}
+
+.btn-gradient:active {
+    transform: scale(0.98); /* Efek membal saat diklik */
+}
+
+/* Responsif HP */
+@media (max-width: 480px) {
+    .main-card {
+        padding: 25px 20px;
+    }
+    .header-section h1 {
+        font-size: 1.5rem;
+    }
+}
